@@ -1,5 +1,4 @@
 import { connect } from 'mongoose';
-// const { connect } = require('mongoose')
 
 const conectarDB = async () => {
     return await connect(

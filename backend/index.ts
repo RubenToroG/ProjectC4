@@ -1,29 +1,77 @@
 import conectarDB from "./db/db";
-import UserModel from "./models/user";
+import { UserModel } from "./models/user";
+import { Enum_EstadoProyecto, Enum_EstadoUsuario, Enum_Rol, Enum_TipoObjetivo } from "./models/enums";
+import { ProjectModel } from "./models/project";
+import { ObjectiveModel } from "./models/objetive";
+
+const crearProyectoConObjetivos = async () => {
+
+}
 
 const main = async () => {
   await conectarDB();
 
+  
+};
+
+main();
+
+
+
+  //CRUD USUARIOS
+
+  
+  // CREAR USUARIOS
   // await UserModel.create({
-  //   email: "user@example.com",
-  //   identification: "12345678",
-  //   nombre: "NombrePrueba",
-  //   apellidos: "apellidosPrueba",
+  //   apellido: "gfhfh",
+  //   email: "juan@aksdhh.es",
+  //   identificacion: "123234",
+  //   nombre: "andres",
+  //   rol: Enum_Rol.estudiante
   // })
   //   .then((u) => {
   //     console.log("user created", u);
   //   })
   //   .catch((err) => {
   //     console.error("error creating user", err);
+  // });
+
+
+  //OBTENER LOS USUARIOS
+  // await UserModel.find()
+  //   .then((u) => {
+  //     console.log("user found", u);
+  //   })
+  //   .catch((err) => {
+  //     console.error("error finding user", err);
   //   });
 
-  await UserModel.find()
-    .then((u) => {
-      console.log("user found", u);
-    })
-    .catch((err) => {
-      console.error("error finding user", err);
-    });
-};
+  //OBTENER UN SOLO USER
+  // await UserModel.findOne({ identificacion: '0000001' })
+  // .then((u) => {
+  //   console.log('User encontrado', u);
+  // }).catch((e) => {
+  //   console.log('Error user no encontrado', e);
+  // })
 
-main();
+
+  //EDITAR USUARIO
+  // await UserModel.findOneAndUpdate(
+  //   { correo: 'sdfds' },
+  //   {
+  //     nombre: 'Andres',
+  //     apellido: 'Gonzales',
+  //   }
+  // ).then((u) => {
+  //   console.log('Usuario Actializado', u);
+  // }).catch(e => {
+  //   console.log('Error actualizando', e);
+  // })
+
+  //ELIMINAR USUARIO
+  // await UserModel.findOneAndDelete( { correo: 'sdfds' })
+  // .then((u) => {
+  //   console.log('Usuario Eliminado', u);
+  // }).catch((e) => {
+  //   console.log('Error eliminando user', e);
+  // })
