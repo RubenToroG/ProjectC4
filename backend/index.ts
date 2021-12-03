@@ -11,6 +11,8 @@ const crearProyectoConObjetivos = async () => {
 const main = async () => {
   await conectarDB();
 
+  const objetivos = await ObjectiveModel.find({ project: '61a61400495097cb194905ab'});
+  console.log('El proyecto es: ', objetivos);
   
 };
 
