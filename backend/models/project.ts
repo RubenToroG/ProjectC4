@@ -5,7 +5,7 @@ import { UserModel } from './user';
 interface Proyecto {
     nombre: string,
     presupuesto: number,
-    fechaInicio: Date,
+    fechaInicio: Date,pro
     fechaFin: Date,
     estado: Enum_EstadoProyecto,
     fase: Enum_FaseProyecto,
